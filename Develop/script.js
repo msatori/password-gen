@@ -1,41 +1,66 @@
 window.alert("Welcome to Password Generator!");
 
-//variable for special characters
-var specialChar = [
+//user prompt input variables
+
+//special characters array
+specialChar = [
 '@','#','$','^','&','*','(',')','-','_','+','[',']','=','?','>','<','.',
 ]
-//variable for uppercase letters
-var upperLetters = [
+// uppercase letters array
+upperLetters = [
   'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'
 ];
-//variable for lower case letters
-var lowerLetters = [
+// lower case letters array
+lowerLetters = [
   'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'
 ];
-//variable for numbers 
-var numberChar = [
+//numbers 
+numberChar = [
   '1','2','3','4','5','6','7','8','9'
 ];
 
+var length;
+var useNumbers;
+var useUpperLetters;
+var useLowerLetters;
+var useSpecialChars;
 
-// Get references to the #generate element
+function generatePassword() {
+  //prompts for password requirements
+  length= parseInt(prompt("How long would you like your password? Must be between 8 and 128 characters"));
+    if (length < 8 || length > 128 ) {
+      alert("You must choose between 8 and 128 characters");
+    }
 
-window.alert("Welcome to Password Generator!");
+    else if (length > 8 || length < 129 ) {
+      useSpecialChars =confirm ("Do you want special characters?");
 
-function passWordQuestions(){
-  var length = parseInt(
-    prompt("How Many Characters Would You Like In Your Password? Choose Between 8 and 128")
-  )
+      useNumbers = confirm("Do you want numbers?");
 
-  if(length<8){
-    alert("Password must be at least 8 characters")
-  }
+      useUpperLetters = confirm("Do you want Uppercase letters?");
+
+      useLowerLetters = confirm("Do you want lowercase letters?");
+    }
+    
+
+    
+
+}
+//Welcome window 
+
+//Password Prompts
+
+
 //add prompts for password questions
 //use special characters
-//use uppercase letters
-//use lowercase letters
-//use numbers
-}
+
+
+
+//combine all functions
+
+//combine functions for numbers, upper, and lower
+
+//combine functions for 
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -47,17 +72,6 @@ function writePassword() {
 
 }
 
-function useSpecialChar(){}
-
-function useCapChar(){}
-
-function useLowChar(){}
-
-function useNumbers(){}
-
-function generatePassword(){}
-
-function writePassword(){}
 
 //add password to textbox
 
